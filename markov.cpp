@@ -77,14 +77,15 @@ std::vector <std::string> getMapKeys(std::map<std::string,std::string> theMap){
 int main(){
     
     std::map <std::string,std::string> markovModel; //this will hold the model
-    std::ifstream fileIn("diaryOfANobody.txt"); //load in the text file for the model
-    std::ifstream fileIn2("scientificMonthly.txt"); //load in the second text file
+    std::ifstream fileIn("trump_tweets_all.txt"); //load in the text file for the model
+    std::ifstream fileIn2("shakespeare.txt"); //load in the second text file
+    //trump tweets from here https://github.com/thomashikaru/faketrumptweets
     std::string line, text, beginning; //used for making the model
     std::vector <std::string> beginnings; //store all of the line beginnings
     std::string current, output, allNexts, next, input;
     srand(time(0)); //set the seed
     
-    int order = 9;
+    int order = 10;
     
     text = "";
     beginning = "";
@@ -183,7 +184,7 @@ int main(){
         output = current;
         
         //generate the output some number of times (amount of chars in the output)
-        for (int i = 0; i < 85; i++){
+        for (int i = 0; i < 160; i++){
             
             //get all the possible next chars for the current n-gram
             allNexts = markovModel[current];
