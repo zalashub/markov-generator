@@ -1,6 +1,8 @@
 # Markov Generator
 A command line C++ application generating text from two files based on Markov Chains of n-th order.  
 
+*Briefly based on a university project, extended individually.*
+
 ## Run
 Compile the project by running `g++ --std c++11 markov.cpp` on the terminal in the project directory.  
 Run it with `./a.out`  
